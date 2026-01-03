@@ -7,9 +7,8 @@ This project is no longer maintained.
 
 |Build Status| |Coverage Status| |Documentation Status| |Downloads| |Latest Version| |Supported Python versions| |License|
 
-.. image:: https://www.goodreads.com/favicon.ico
+.. image:: http://s.gr-assets.com/assets/icons/goodreads_icon_50x50-823139ec9dc84278d3863007486ae0ac.png
    :width: 100
-   :alt: Goodreads Logo
 
 This package provides a Python interface for the `Goodreads
 API <https://www.goodreads.com/api>`__. Using it, you can do pretty much
