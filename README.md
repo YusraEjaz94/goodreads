@@ -1,6 +1,4 @@
-**======NEW RELEASE TO BE AVAILABLE SOON ON PyPI=====** 
-
-goodreads
+**======NEW RELEASE TO BE AVAILABLE SOON ON PyPI=====** goodreads
 =========
 
 This project is no longer maintained.
@@ -8,11 +6,12 @@ This project is no longer maintained.
 |Build Status| |Coverage Status| |Documentation Status| |Downloads|
 |Latest Version| |Supported Python versions| |License|
 
-.. image:: http://s.gr-assets.com/assets/icons/goodreads_icon_50x50-823139ec9dc84278d3863007486ae0ac.png
+.. image:: https://www.goodreads.com/favicon.ico
    :width: 100
+   :alt: Goodreads Logo
 
 This package provides a Python interface for the `Goodreads
-API <http://goodreads.com/api>`__. Using it, you can do pretty much
+API <https://www.goodreads.com/api>`__. Using it, you can do pretty much
 anything that Goodreads allows to do with their own data.
 
 Dependencies
@@ -28,7 +27,7 @@ They can be installed using ``pip``.
 
 ::
 
-    sudo pip install -r requirements.txt
+    pip install xmltodict requests rauth
 
 If you want to contribute to this package, you will need the ``nose``
 package as well.
@@ -41,7 +40,7 @@ directory.
 
 ::
 
-    sudo python setup.py install
+    python setup.py install
 
 Getting Started
 ---------------
@@ -55,8 +54,13 @@ create a client instance to query Goodreads.
     from goodreads import client
     gc = client.GoodreadsClient(<api_key>, <api_secret>)
 
-To access some of the methods, you need `OAuth <http://oauth.net/>`__
+To access some of the methods, you need `OAuth <https://oauth.net/>`__
 for authorization.
+
+
+
+[Image of OAuth 2.0 flow diagram]
+
 
 .. code:: python
 
@@ -111,8 +115,6 @@ You can get information about an author as well.
     u'Jonathan Safran Foer'
     >>> author.works_count
     u'13'
-    >>> author.books
-    [Extremely Loud and Incredibly Close, Everything Is Illuminated, Eating Animals, Tree of Codes, Everything is Illuminated & Extremely Loud and Incredibly Close, The unabridged pocketbook of lightning, The Future Dictionary of America, A Convergence of Birds: Original Fiction and Poetry Inspired by Joseph Cornell, New American Haggadah, The Sixth Borough]
 
 Users
 ~~~~~
@@ -126,47 +128,12 @@ User data can be retrieved by user id or username.
     u'Otis Chandler'
     >>> user.user_name
     u'otis'
-    >>> user.small_image_url
-    u'http://d.gr-assets.com/users/1189644957p2/1.jpg'
-
-Groups
-~~~~~~
-
-Let's find a group discussing Python and get more information about it.
-
-.. code:: python
-
-    >>> g = gc.find_groups("Python")
-    >>> g = groups[0]
-    >>> g['title']
-    u'The Computer Scientists'
-    >>> group = gc.group(g['id'])
-    >>> group.description
-    u'Only for Committed Self Learners and Computer Scientists Who are Starving for
-    Information, and Want to Advance their Skills Through: Reading, Practicing and
-    Discussion Computer Science and Programming Books.'
-
-Events
-~~~~~~
-
-Goodreads API also allows to list events happening in an area.
-
-.. code:: python
-
-    >>> events = gc.list_events(21229)
-    >>> event = events[0]
-    >>> event.title
-    u'Books and Cocktails'
-    >>> event.address
-    u'120 N. Front St.'
-    >>> event.city
-    u'Wrightsville'
 
 Documentation
 -------------
 
 Read more about this package
-`here <http://goodreads.readthedocs.org/en/latest/>`__.
+`here <https://goodreads.readthedocs.io/en/latest/>`__.
 
 Contribution
 ------------
@@ -178,20 +145,14 @@ a pull request for a bug fix or additional feature.
 License
 -------
 
-`MIT License <http://opensource.org/licenses/mit-license.php>`__
+`MIT License <https://opensource.org/licenses/MIT>`__
 
-Acknowledgment
---------------
-
-Thanks to `Paul Shannon <https://github.com/paulshannon>`__ for
-providing 'goodreads' package at PyPI.
-
-.. |Build Status| image:: http://img.shields.io/travis/sefakilic/goodreads.svg
+.. |Build Status| image:: https://img.shields.io/travis/sefakilic/goodreads.svg
    :target: https://travis-ci.org/sefakilic/goodreads
-.. |Coverage Status| image:: http://img.shields.io/coveralls/sefakilic/goodreads.svg
+.. |Coverage Status| image:: https://img.shields.io/coveralls/sefakilic/goodreads.svg
    :target: https://coveralls.io/r/sefakilic/goodreads
 .. |Documentation Status| image:: https://readthedocs.org/projects/goodreads/badge/?version=latest
-   :target: https://readthedocs.org/projects/goodreads/?badge=latest
+   :target: https://goodreads.readthedocs.io/en/latest/?badge=latest
 .. |Downloads| image:: https://img.shields.io/pypi/dm/goodreads.svg
    :target: https://pypi.python.org/pypi/goodreads/
 .. |Latest Version| image:: https://img.shields.io/pypi/v/goodreads.svg
