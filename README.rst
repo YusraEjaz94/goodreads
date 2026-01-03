@@ -1,10 +1,11 @@
-**======NEW RELEASE TO BE AVAILABLE SOON ON PyPI=====** goodreads
+**======NEW RELEASE TO BE AVAILABLE SOON ON PyPI=====**
+
+goodreads
 =========
 
 This project is no longer maintained.
 
-|Build Status| |Coverage Status| |Documentation Status| |Downloads|
-|Latest Version| |Supported Python versions| |License|
+|Build Status| |Coverage Status| |Documentation Status| |Downloads| |Latest Version| |Supported Python versions| |License|
 
 .. image:: https://www.goodreads.com/favicon.ico
    :width: 100
@@ -56,11 +57,6 @@ create a client instance to query Goodreads.
 
 To access some of the methods, you need `OAuth <https://oauth.net/>`__
 for authorization.
-
-
-
-[Image of OAuth 2.0 flow diagram]
-
 
 .. code:: python
 
